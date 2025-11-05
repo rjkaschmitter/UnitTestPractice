@@ -20,3 +20,33 @@ TEST(PasswordTest, single_letter_password)
 	int actual = my_password.count_leading_characters("Z");
 	ASSERT_EQ(1, actual);
 }
+
+TEST(PasswordTest, two_letter_repeat)
+{
+	Password my_password;
+	ASSERT_EQ(2, my_password.count_leading_characters("aab"))
+}
+
+TEST(PasswordTest, lowercase_then_uppercase)
+{
+	Password my_password;
+	ASSERT_EQ(1, my_password.count_leading_characters("aAb"))
+}
+
+TEST(PasswordTest, spaced_out)
+{
+	Password my_password;
+	ASSERT_EQ(1, my_password.count_leading_characters("a ab"))
+}
+
+TEST(PasswordTest, leading_spaces)
+{
+	Password my_password;
+	ASSERT_EQ(2, my_password.count_leading_characters("  aab"))
+}
+
+EST(PasswordTest, empty_string)
+{
+	Password my_password;
+	ASSERT_EQ(0, my_password.count_leading_characters(""))
+}
