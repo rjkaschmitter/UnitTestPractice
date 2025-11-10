@@ -24,71 +24,71 @@ TEST(PasswordTest, single_letter_password)
 TEST(PasswordTest, two_letter_repeat)
 {
 	Password my_password;
-	ASSERT_EQ(2, my_password.count_leading_characters("aab"))
+	ASSERT_EQ(2, my_password.count_leading_characters("aab"));
 }
 
 TEST(PasswordTest, lowercase_then_uppercase)
 {
 	Password my_password;
-	ASSERT_EQ(1, my_password.count_leading_characters("aAb"))
+	ASSERT_EQ(1, my_password.count_leading_characters("aAb"));
 }
 
 TEST(PasswordTest, spaced_out)
 {
 	Password my_password;
-	ASSERT_EQ(1, my_password.count_leading_characters("a ab"))
+	ASSERT_EQ(1, my_password.count_leading_characters("a ab"));
 }
 
 TEST(PasswordTest, leading_spaces)
 {
 	Password my_password;
-	ASSERT_EQ(2, my_password.count_leading_characters("  aab"))
+	ASSERT_EQ(2, my_password.count_leading_characters("  aab"));
 }
 
 TEST(PasswordTest, empty_string)
 {
 	Password my_password;
-	ASSERT_EQ(0, my_password.count_leading_characters(""))
+	ASSERT_EQ(0, my_password.count_leading_characters(""));
 }
 
 TEST(PasswordTest, upper_lower)
 {
 	Password my_password;
-	ASSERT_EQ(true, my_password.has_mixed_case("Ab"))
+	ASSERT_EQ(true, my_password.has_mixed_case("Ab"));
 }
 
 TEST(PasswordTest, all_lower)
 {
 	Password my_password;
-	ASSERT_EQ(false, my_password.has_mixed_case("aaaaa"))
+	ASSERT_EQ(false, my_password.has_mixed_case("aaaaa"));
 }
 
 TEST(PasswordTest, upper_lower_upper)
 {
 	Password my_password;
-	ASSERT_EQ(true, my_password.has_mixed_case("BaaaaaB"))
+	ASSERT_EQ(true, my_password.has_mixed_case("BaaaaaB"));
 }
 
 TEST(PasswordTest, empty)
 {
 	Password my_password;
-	ASSERT_EQ(false, my_password.has_mixed_case(""))
+	ASSERT_EQ(false, my_password.has_mixed_case(""));
 }
 
 TEST(PasswordTest, All_upper)
 {
 	Password my_password;
-	ASSERT_EQ(false, my_password.has_mixed_case("BBBBBB"))
+	ASSERT_EQ(false, my_password.has_mixed_case("BBBBBB"));
 }
 
 TEST(PasswordTest, only_upper)
 {
 	Password my_password;
-	ASSERT_EQ(false, my_password.has_mixed_case("A"))
+	ASSERT_EQ(false, my_password.has_mixed_case("A"));
 }
 
 TEST(PasswordTest, only_lower)
 {
 	Password my_password;
-	ASSERT_EQ(false, my_password.has_mixed_case("b"))
+	ASSERT_EQ(false, my_password.has_mixed_case("b"));
 }
