@@ -51,43 +51,43 @@ TEST(PasswordTest, empty_string)
 	ASSERT_EQ(0, my_password.count_leading_characters(""))
 }
 
-TEST(PasswordTest, empty_string)
+TEST(PasswordTest, upper_lower)
 {
 	Password my_password;
 	ASSERT_EQ(true, my_password.has_mixed_case("Ab"))
 }
 
-TEST(PasswordTest, empty_string)
+TEST(PasswordTest, all_lower)
 {
 	Password my_password;
 	ASSERT_EQ(false, my_password.has_mixed_case("aaaaa"))
 }
 
-TEST(PasswordTest, empty_string)
+TEST(PasswordTest, upper_lower_upper)
 {
 	Password my_password;
 	ASSERT_EQ(true, my_password.has_mixed_case("BaaaaaB"))
 }
 
-TEST(PasswordTest, empty_string)
+TEST(PasswordTest, empty)
 {
 	Password my_password;
 	ASSERT_EQ(false, my_password.has_mixed_case(""))
 }
 
-TEST(PasswordTest, empty_string)
+TEST(PasswordTest, All_upper)
 {
 	Password my_password;
 	ASSERT_EQ(false, my_password.has_mixed_case("BBBBBB"))
 }
 
-TEST(PasswordTest, empty_string)
+TEST(PasswordTest, only_upper)
 {
 	Password my_password;
 	ASSERT_EQ(false, my_password.has_mixed_case("A"))
 }
 
-TEST(PasswordTest, empty_string)
+TEST(PasswordTest, only_lower)
 {
 	Password my_password;
 	ASSERT_EQ(false, my_password.has_mixed_case("b"))
