@@ -45,8 +45,50 @@ TEST(PasswordTest, leading_spaces)
 	ASSERT_EQ(2, my_password.count_leading_characters("  aab"))
 }
 
-EST(PasswordTest, empty_string)
+TEST(PasswordTest, empty_string)
 {
 	Password my_password;
 	ASSERT_EQ(0, my_password.count_leading_characters(""))
+}
+
+TEST(PasswordTest, empty_string)
+{
+	Password my_password;
+	ASSERT_EQ(true, my_password.has_mixed_case("Ab"))
+}
+
+TEST(PasswordTest, empty_string)
+{
+	Password my_password;
+	ASSERT_EQ(false, my_password.has_mixed_case("aaaaa"))
+}
+
+TEST(PasswordTest, empty_string)
+{
+	Password my_password;
+	ASSERT_EQ(true, my_password.has_mixed_case("BaaaaaB"))
+}
+
+TEST(PasswordTest, empty_string)
+{
+	Password my_password;
+	ASSERT_EQ(false, my_password.has_mixed_case(""))
+}
+
+TEST(PasswordTest, empty_string)
+{
+	Password my_password;
+	ASSERT_EQ(false, my_password.has_mixed_case("BBBBBB"))
+}
+
+TEST(PasswordTest, empty_string)
+{
+	Password my_password;
+	ASSERT_EQ(false, my_password.has_mixed_case("A"))
+}
+
+TEST(PasswordTest, empty_string)
+{
+	Password my_password;
+	ASSERT_EQ(false, my_password.has_mixed_case("b"))
 }
