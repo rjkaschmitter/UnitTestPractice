@@ -27,14 +27,35 @@ int Password::count_leading_characters(string phrase){
 #include <cctype>
 bool Password::has_mixed_case(string str)
 {
-  bool found = false;
-  for(char c : str){
-    if( !found && c >= 'A' && c <= 'Z' ){
-      found = true;
-    }
-    else if( found && c >= 'a' && c <= 'z'){
-      return true;
+   int count_lower = 0;
+  for (int i = 0; i < str.length(); i++)
+  {
+    if (str[i] >= 'a' && str[i] <= 'z')
+    {
+      count_lower++;
     }
   }
-  return false;
+  return count_lower > 0 && count_lower < str.length();
+}
+
+unsigned int unique_characters(string str)
+{
+  int count_unique = 0;
+  bool dup = false;
+  for (int i = 0; i < str.length(); i++)
+  {
+    for (int j = 0; j < i; j++)
+    {
+      if (str[i] == str[j])
+      {
+        dup = true;
+      }
+      if (dup == false)
+      {
+        count_unique++;
+      }
+      dup = false;
+    }
+  }
+  return count_unique;
 }
